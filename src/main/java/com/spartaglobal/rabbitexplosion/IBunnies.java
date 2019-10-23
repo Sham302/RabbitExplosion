@@ -4,7 +4,6 @@ public interface IBunnies {
 
     boolean getIsMale();
 
-
     void setGender();
 
     int getAge();

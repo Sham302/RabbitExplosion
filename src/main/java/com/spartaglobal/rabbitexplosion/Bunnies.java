@@ -33,17 +33,14 @@ public class Bunnies implements IBunnies{
     }
 
     @Override
-    public void setAge(int age) {
-        Random rdm = new Random();
-        int random = rdm.nextInt(6);
-
-        this.age = random;
+    public void setAge(int age) { // refer to seconds
+        this.age = age;
         setMature(this.age);
     }
 
     @Override
     public void setMature(int age) {
-     this.mature = age > 0.25;
+     this.mature = age >= 3;
     }
 
     @Override
