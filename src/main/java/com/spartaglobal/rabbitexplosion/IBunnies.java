@@ -4,19 +4,13 @@ public interface IBunnies {
 
     boolean getIsMale();
 
-    void setGender();
-
     int getAge();
     void setAge(int age);
 
-    void setMature(int age);
+    void setMature(boolean mature);
     boolean getMature();
 
-
-
-
-
-
-
+    //setaliveordead??
+    //setgender?
 
 }

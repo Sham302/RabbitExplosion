@@ -4,18 +4,13 @@ import java.util.Random;
 
 public class Bunnies implements IBunnies{
 
-    private int age = 0;
+    private int age;
     private boolean mature;
     private boolean isMale;
 
-    @Override
-    public boolean getIsMale() {
-        return this.isMale;
-    }
-
 
     @Override
-    public void setGender() {
+    public boolean getIsMale() { //maybe add setter?
         Random rdm = new Random();
         int random = rdm.nextInt(2);
 
@@ -24,27 +19,27 @@ public class Bunnies implements IBunnies{
         } else {
             this.isMale = false;
         }
-
+        return this.isMale;
     }
+
 
     @Override
     public int getAge() {
-        return age++;
+        return this.age++;
     }
 
     @Override
-    public void setAge(int age) { // refer to seconds
+    public void setAge(int age) {
         this.age = age;
-        setMature(this.age);
     }
 
     @Override
-    public void setMature(int age) {
-     this.mature = age >= 3;
+    public void setMature(boolean mature) {
+     this.mature = this.age >= 3;
     }
 
     @Override
     public boolean getMature() {
-        return mature;
+        return this.mature;
     }
 }
